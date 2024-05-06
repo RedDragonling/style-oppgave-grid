@@ -1,0 +1,112 @@
+div {
+  color: white;
+  padding: 1em;
+}
+
+.container {
+  height: 720px;
+  width: 1080px;
+  background-color: #eee;
+  display: grid;
+  margin: 100px auto;
+  padding: 10px;
+  gap: 10px;
+}
+.con-1 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  div:nth-child(1){
+    background-color: #6e469f;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+  div {
+    background-color: #5c94bf;
+  }
+}
+
+.con-2 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  div:nth-child(1){
+    background-color: #6e469f;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+  div:nth-child(4){
+    background-color: #a23737;
+    grid-row-start: 2;
+    grid-row-end: 5;
+  }
+  div:nth-child(9){
+    background-color: #b6a549;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  div {
+    background-color: #5c94bf;
+  }
+}
+
+.con-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  div:nth-child(1){
+    background-color: #6e469f;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  div:nth-child(2){
+    background-color: #fb91b6;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  div:nth-child(8){
+    background-color: #b6a549;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  div:nth-child(9){
+    background-color: #a23737;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  div {
+    background-color: #5c94bf;
+  }
+}
+
+.website-col {
+  grid-template-areas:
+  'header header header'
+  'nav content sidebar'
+  'nav footer footer';
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  gap: 1px;
+  header {
+    grid-area: header;
+    background-color: #5c94bf;
+    padding: 1em;
+  }
+  nav {
+    grid-area: nav;
+    background-color: #5c94bf;
+    padding: 1em;
+  }
+  main {
+    grid-area: content;
+    background-color: #5c94bf;
+    padding: 1em;
+  }
+  aside {
+    grid-area: sidebar;
+    background-color: #5c94bf;
+    padding: 1em;
+  }
+  footer {
+    grid-area: footer;
+    background-color: #5c94bf;
+    padding: 1em;
+  }
+}
